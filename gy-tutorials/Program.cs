@@ -9,7 +9,7 @@ namespace tutorial
         {
 
             #region try - catch
-#if true
+#if false
             Console.WriteLine("Please enter number 1: ");
             int num1 = default, num2= default;
             try
@@ -28,6 +28,26 @@ namespace tutorial
             Console.WriteLine("Sum: " + (num1 + num2));
 
 #endif
+
+            #endregion
+            #region try-catch exceptions
+
+
+#if true
+            try
+            {
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+#endif
+
+
+
 
             #endregion
 
