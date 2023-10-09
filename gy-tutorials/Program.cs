@@ -18,12 +18,21 @@ namespace tutorial
                 num1 = int.Parse(Console.ReadLine());
                 Console.WriteLine("Please enter number 2: ");
                 num2 = int.Parse(Console.ReadLine());
-                Console.WriteLine("Sum: " + (num1 + num2));
+                Console.WriteLine("Sum: " + (num1 / num2));
 
             }
-            catch (Exception ex) 
+          
+            catch (DivideByZeroException ex) 
             {
                 Console.WriteLine("Message: " + ex.Message); 
+            }
+            catch (FormatException ex) 
+            {
+                Console.WriteLine("Message: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Message: " + ex.Message);
             }
 
 
