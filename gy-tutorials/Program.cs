@@ -11,7 +11,7 @@ namespace tutorial
             #region try - catch
 #if true
             Console.WriteLine("Please enter number 1: ");
-            int num1 = default, num2= default;
+            int num1 = default, num2 = default;
             try
             {
                 //Contains possible runtime errors.
@@ -21,18 +21,24 @@ namespace tutorial
                 Console.WriteLine("Sum: " + (num1 / num2));
 
             }
-          
-            catch (DivideByZeroException ex) 
+
+            catch (DivideByZeroException ex)
             {
-                Console.WriteLine("Message: " + ex.Message); 
+                Console.WriteLine("Message: " + ex.Message);
             }
-            catch (FormatException ex) 
+            catch (FormatException ex)
             {
                 Console.WriteLine("Message: " + ex.Message);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Message: " + ex.Message);
+            }
+            finally
+            {
+
+                //Works in both condition try or catch
+                Console.WriteLine("Finally.");
             }
 
 
