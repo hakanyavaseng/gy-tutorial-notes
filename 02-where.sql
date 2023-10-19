@@ -22,3 +22,9 @@ Select * from Personeller where Bolge <> 'NULL'
 -- WHERE & BETWEEN
 
 Select * from Personeller where YEAR(DogumTarihi) between 1950 and 1965
+
+--WHERE & IN
+
+-- Despite many or's In command can be used.
+Select Adi from Personeller Where Sehir In('London', 'Tacoma', 'Kirkland')
+
