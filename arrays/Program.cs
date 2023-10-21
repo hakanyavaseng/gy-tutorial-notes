@@ -60,7 +60,31 @@ namespace arrays
             //Sort
 
                 Array.Sort(a2);
-                for (int i = 0; i < a2.Length; i++) { Console.WriteLine(a2.GetValue(i)); }
+                //for (int i = 0; i < a2.Length; i++) { Console.WriteLine(a2.GetValue(i)); }
+
+            #endregion
+            #region Properties
+
+            //IsReadOnly
+                bool flag = a2.IsReadOnly;
+                Console.WriteLine(flag);
+
+            //IsFixedSize
+                flag = a2.IsFixedSize;
+                Console.WriteLine(flag);
+            
+            //Length
+                Console.WriteLine(a2.Length);
+
+            //Rank
+                Console.WriteLine(a2.Rank);
+                int[,,] x = new int[3, 4, 5];
+                Console.WriteLine(x.Rank);
+
+
+
+
+
 
             #endregion
             #endregion
