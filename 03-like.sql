@@ -39,4 +39,18 @@ Select adi from Personeller where adi like '[a-k]%'
 
 Select * from Personeller where adi like '[^a]%'
 
+
+
 Select * from Personeller where adi like '[^an]%'
+
+
+-- Like & Escape Characters
+-- The operators which we use in like queries, if data contains %, _, [] etc. operators we can get error.
+-- Then we need escape characters.
+
+-- [] operator
+-- Escape command
+
+Select * from Personeller where adi like '[_]%' 
+
+Select * from Personeller where adi like '\_%' Escape '\'
