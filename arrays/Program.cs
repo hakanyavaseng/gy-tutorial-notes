@@ -15,29 +15,30 @@ namespace arrays
 
             #endregion
             #region arrayClass
-            int[] a = new int[5] {1,2,3,4,5}; // Indexer can be used
+
+            int[] a = new int[5] { 1, 2, 3, 4, 5 }; // Indexer can be used
             Array a2 = new int[5]; // Indexer can not be used
 
             // a2[0] = 5;       can not be done
 
             // First way
-                // a2 = a; 
-            
+            // a2 = a; 
+
             //Second way
-               // a2 = new int[5] { 1, 2, 3, 4, 5 };
+            // a2 = new int[5] { 1, 2, 3, 4, 5 };
 
             //Third way
-                a2.SetValue(1,0); a2.SetValue(2,1); a2.SetValue(3,2);
+            a2.SetValue(1, 0); a2.SetValue(2, 1); a2.SetValue(3, 2);
 
-                object value = a2.GetValue(1);
-                //Console.WriteLine(value);
+            object value = a2.GetValue(1);
+            //Console.WriteLine(value);
 
             #region Methods
 
             //Clear
-                //Assigns default value to all elements
+            //Assigns default value to all elements
 
-                Array.Clear(a2);
+            Array.Clear(a2);
                 //for(int i=0; i<a2.Length; i++) { Console.WriteLine(a2.GetValue(i)); }
             
             //Copy, has many variations
@@ -87,6 +88,15 @@ namespace arrays
 
 
             #endregion
+            #endregion
+            #region CreateInstance
+
+            Array a3 = Array.CreateInstance(typeof(int), 3); 
+            Array a4 = Array.CreateInstance(typeof(int), 1,2,3,4); 
+            Console.WriteLine(a4.Rank);
+
+
+
             #endregion
         }
 
