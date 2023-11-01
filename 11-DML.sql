@@ -56,3 +56,7 @@ Update Urunler Set UrunAdi = (Select Adi from Personeller Where PersonelID = 3)
 --Update & Top
 Update TOP(30) Urunler set UrunAdi = 'x'
 
+---------------------------------------------------DELETE-------------------------------------------------------------
+DELETE From Urunler --!!!!!
+
+DELETE From Urunler where KategoriID < 3
