@@ -1,7 +1,7 @@
 --DML
 -- SELECT INSERT UPDATE DELETE
 
---SELECT 
+---------------------------------------------------SELECT-------------------------------------------------------------
 Select * from Personeller
 
 --INSERT
@@ -38,3 +38,21 @@ Select Adi,Soyadi, Ulke into OrnekPersoneller2 from Personeller
 
 --Deleting additional tables 
 DROP Table OrnekPersoneller, OrnekPersoneller2
+
+---------------------------------------------------UPDATE-------------------------------------------------------------
+
+--Update [Table Name] Set [Column Name] = Value
+Update Personeller Set Adi = 'Mehmet' where Adi = 'Nancy'
+
+Select Adi, Soyadi into OrnekPersoneller from Personeller
+
+--Updating more than 1 table via join
+Update Urunler Set UrunAdi = k.kategoriAdi from Urunler u 
+INNER JOIN Kategoriler k on u.KategoriID = k.KategoriID
+
+--Update & Subquery
+Update Urunler Set UrunAdi = (Select Adi from Personeller Where PersonelID = 3)
+
+--Update & Top
+Update TOP(30) Urunler set UrunAdi = 'x'
+
