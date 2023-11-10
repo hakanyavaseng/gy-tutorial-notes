@@ -14,10 +14,23 @@ namespace oop
 
 
             new myClass(); //Referansla isaretlenmedigi icin, bu nesneye artık erisilemez. 
+
+            #region Deep Copy
+            myClass m1 = new myClass();
+            myClass m2 = m1; //Shallow Copy
+
+            myClass m3 = m1.Clone(); //Deep Copy
+
+
+            #endregion
         }
     }
-    class myClass
+    class myClass 
     {
+        public myClass Clone()
+        {
+            return (myClass)this.MemberwiseClone(); //MemberwiseClone bir sinifin icerisinde bir siniftan uretilmis olan o anki nesneyi clone'lamamizi saglar
+        }
         public int MyProperty { get; set; }
     }
 }
