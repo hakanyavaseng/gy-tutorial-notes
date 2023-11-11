@@ -10,8 +10,10 @@ namespace oop
 
             MyClass my = new MyClass
             {
-                InitOnlyProperty = 5
+                A = 5
             };
+
+            Console.WriteLine(my.A);
 
 
         }
@@ -37,6 +39,14 @@ namespace oop
 
 class MyClass
 {
+    readonly int a;
+
+    public int A 
+    {
+        get { return a; }
+        // set { a = value; }  // Error
+        init { a = value; }  // OK
+    }
     public int ReadOnlyProperty { get; } = 4;
     public int InitOnlyProperty { get; init; }
 }
