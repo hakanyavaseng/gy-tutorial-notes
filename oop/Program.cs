@@ -4,6 +4,7 @@ using System.Dynamic;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
+using Microsoft.VisualBasic;
 
 namespace oop
 {
@@ -76,6 +77,18 @@ namespace oop
 
             #endregion
 
+            #region Deconstruct
+
+        //     Person p1 = new Person()
+        //     {
+        //         Name = "Hakan",
+        //         Age = 21
+        //     };
+
+        //    var (x, y) = p1;    
+
+
+            #endregion
 
         }
 
@@ -100,6 +113,7 @@ namespace oop
 class MyClass
 {
 
+    
 
     //A class can contain only one destructor.
     //Destructors cannot be inherited or overloaded.	
@@ -156,9 +170,29 @@ class MyClass
 }
 
 
+class Person 
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+
+    public void Deconstruct(out string name, out int age)
+    {
+        name = Name;
+        age = Age;
+    }
+
+
+
+}
+
+
+
+
+
 /// <summary>
 /// Test  Record Class
 /// </summary>
+/// 
 record MyRecord
 {
     public int MyProperty1 { get; init; }
