@@ -53,7 +53,7 @@ namespace oop
 
             MyRecord mr2 = mr1 with { MyProperty2 = 15 };
 
-
+            #endregion
 
 
         }
