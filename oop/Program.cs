@@ -103,6 +103,14 @@ namespace oop
 
 
             #endregion
+      
+            #region Positional Records
+
+            // MyRecord2 m = new MyRecord2("Hakan", "Yavas");
+            // var(n,s) = m;
+            #endregion
+      
+            
         }
 
         static void useGC()
@@ -190,7 +198,11 @@ class MyClass
 
 }
 
-
+record MyRecord2(string name, string surname) //This semantic is positional record, came with C# 9.0
+{
+    //Record properties automatically defined as init
+    //Positional records
+}
 class Person
 {
     public string Name { get; set; }
