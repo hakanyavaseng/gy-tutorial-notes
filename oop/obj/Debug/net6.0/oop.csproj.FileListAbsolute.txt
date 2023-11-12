@@ -1,0 +1,14 @@
+C:\Users\hakan\OneDrive\Belgeler\Github Repositories\gy-tutorial-notes\oop\bin\Debug\net6.0\oop.exe
+C:\Users\hakan\OneDrive\Belgeler\Github Repositories\gy-tutorial-notes\oop\bin\Debug\net6.0\oop.deps.json
+C:\Users\hakan\OneDrive\Belgeler\Github Repositories\gy-tutorial-notes\oop\bin\Debug\net6.0\oop.runtimeconfig.json
+C:\Users\hakan\OneDrive\Belgeler\Github Repositories\gy-tutorial-notes\oop\bin\Debug\net6.0\oop.dll
+C:\Users\hakan\OneDrive\Belgeler\Github Repositories\gy-tutorial-notes\oop\bin\Debug\net6.0\oop.pdb
+C:\Users\hakan\OneDrive\Belgeler\Github Repositories\gy-tutorial-notes\oop\obj\Debug\net6.0\oop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hakan\OneDrive\Belgeler\Github Repositories\gy-tutorial-notes\oop\obj\Debug\net6.0\oop.AssemblyInfoInputs.cache
+C:\Users\hakan\OneDrive\Belgeler\Github Repositories\gy-tutorial-notes\oop\obj\Debug\net6.0\oop.AssemblyInfo.cs
+C:\Users\hakan\OneDrive\Belgeler\Github Repositories\gy-tutorial-notes\oop\obj\Debug\net6.0\oop.csproj.CoreCompileInputs.cache
+C:\Users\hakan\OneDrive\Belgeler\Github Repositories\gy-tutorial-notes\oop\obj\Debug\net6.0\oop.dll
+C:\Users\hakan\OneDrive\Belgeler\Github Repositories\gy-tutorial-notes\oop\obj\Debug\net6.0\refint\oop.dll
+C:\Users\hakan\OneDrive\Belgeler\Github Repositories\gy-tutorial-notes\oop\obj\Debug\net6.0\oop.pdb
+C:\Users\hakan\OneDrive\Belgeler\Github Repositories\gy-tutorial-notes\oop\obj\Debug\net6.0\oop.genruntimeconfig.cache
+C:\Users\hakan\OneDrive\Belgeler\Github Repositories\gy-tutorial-notes\oop\obj\Debug\net6.0\ref\oop.dll
