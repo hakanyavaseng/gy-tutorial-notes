@@ -79,17 +79,30 @@ namespace oop
 
             #region Deconstruct
 
-        //     Person p1 = new Person()
-        //     {
-        //         Name = "Hakan",
-        //         Age = 21
-        //     };
+            //     Person p1 = new Person()
+            //     {
+            //         Name = "Hakan",
+            //         Age = 21
+            //     };
 
-        //    var (x, y) = p1;    
+            //    var (x, y) = p1;    
 
 
             #endregion
 
+            #region Static Constructor
+
+            // MyClass m1 = new MyClass();
+            // MyClass m2 = new MyClass();
+
+            //Hepsi ayni nesne çünkü class singleton pattern ile yazildi.
+            // var database1 = Database.GetInstance;
+            // var database2 = Database.GetInstance;
+            // var database3 = Database.GetInstance;
+
+
+
+            #endregion
         }
 
         static void useGC()
@@ -113,7 +126,15 @@ namespace oop
 class MyClass
 {
 
-    
+    //Static Constructor is called only once, the first time you create an object of that class or the first time you access a static member of that class (even if you never create an object of that class).
+    //Static Constructors cannot be overloaded.
+    //For example used in singleton pattern
+    //Static constructor'ın tetiklenebilmesi için sadece ilk nesne üretimi yapılmasına gerek yoktur. İlgili sınıf içerisinde static bir üye çağrıldığında da tetiklenecektir.
+    static MyClass()
+    {
+        Console.WriteLine("Static Constructor");
+    }
+
 
     //A class can contain only one destructor.
     //Destructors cannot be inherited or overloaded.	
@@ -170,7 +191,7 @@ class MyClass
 }
 
 
-class Person 
+class Person
 {
     public string Name { get; set; }
     public int Age { get; set; }
@@ -185,10 +206,6 @@ class Person
 
 }
 
-
-
-
-
 /// <summary>
 /// Test  Record Class
 /// </summary>
@@ -200,3 +217,33 @@ record MyRecord
 
 }
 
+#region Singleton Design Pattern
+
+class Database
+{
+
+    Database()
+    {
+
+    }
+
+    static Database database;
+
+    static public Database GetInstance
+    {
+        get
+        {
+            return database;
+        }
+    }
+
+
+    static Database()
+    {
+        Console.WriteLine("Static Constructor");
+        database = new Database();
+
+
+    }
+}
+#endregion
