@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.VisualBasic;
+using virtualTut;
 
 namespace oop
 {
@@ -110,7 +111,15 @@ namespace oop
             // var(n,s) = m;
             #endregion
       
-            
+            #region  Virtual
+
+            Terlik t = new Terlik();
+            t.Bilgi();
+
+            Kalem k = new Kalem();
+            k.Bilgi();
+
+            #endregion
         }
 
         static void useGC()
