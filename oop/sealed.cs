@@ -7,8 +7,8 @@ namespace sealedKeyword
     }
     // class B : A{} //Gives error, because a class with sealed keyword cannot be inherited
 
-    //Sealed keyword can ve used in classes and methods which is overriden.
 
+    //Sealed keyword can ve used in classes and methods which is overriden.
     class A
     {
         public virtual void Method1()
@@ -25,7 +25,7 @@ namespace sealedKeyword
         }
 
     }
-
+/*  */
     class C : B
     {
         //Gives error, because a method with sealed keyword cannot be overriden

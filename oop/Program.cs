@@ -6,6 +6,8 @@ using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.VisualBasic;
 using virtualTut;
+using X;
+
 
 namespace oop
 {
@@ -104,22 +106,36 @@ namespace oop
 
 
             #endregion
-      
+
             #region Positional Records
 
             // MyRecord2 m = new MyRecord2("Hakan", "Yavas");
             // var(n,s) = m;
             #endregion
-      
+
             #region  Virtual
 
-            Terlik t = new Terlik();
-            t.Bilgi();
+            // Terlik t = new Terlik();
+            // t.Bilgi();
 
-            Kalem k = new Kalem();
-            k.Bilgi();
+            // Kalem k = new Kalem();
+            // k.Bilgi();
 
             #endregion
+
+            #region Sealed Keyword
+
+
+            #endregion  
+
+            #region Partial Class
+
+            X.partialClass m = new X.partialClass();
+            m.A();
+            m.B();
+
+            #endregion
+        
         }
 
         static void useGC()
@@ -216,6 +232,8 @@ class Person
 {
     public string Name { get; set; }
     public int Age { get; set; }
+
+    //Deconstruct method is used to deconstruct an object into its constituent parts.
 
     public void Deconstruct(out string name, out int age)
     {
