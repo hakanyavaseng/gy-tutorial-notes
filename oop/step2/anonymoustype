@@ -1,0 +1,33 @@
+//Anonymoustypes are used to create objects without using class or struct when we need to create objects only once.
+
+//Anonymoustype is read only and cannot be modified.
+
+//Anonymoustype has types defined by compiler and cannot be changed. These types cannot be reached by programmer.
+
+var person = new 
+{ 
+    Name = "Hakan", 
+    Age = 22
+};
+
+Console.WriteLine(person.GetType().FullName); 
+
+
+//Why do we use anonymoustype?
+
+//Anonymoustype is used when we need to create objects only once. For example, we can use anonymoustype when we need to create an object to use in a LINQ query.
+
+//It is used in Entity Framework to create objects from database tables.
+
+//Can be used while transferring data between API and client
+
+
+
+
+
+
+
+
+
+
+

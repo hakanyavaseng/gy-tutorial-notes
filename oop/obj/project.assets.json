@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hakan\\OneDrive\\Belgeler\\Github Repositories\\gy-tutorial-notes\\oop\\oop.csproj",
+      "projectUniqueName": "C:\\Users\\hakan\\OneDrive\\Belgeler\\Github_Repositories\\gy-tutorial-notes\\oop\\oop.csproj",
       "projectName": "oop",
-      "projectPath": "C:\\Users\\hakan\\OneDrive\\Belgeler\\Github Repositories\\gy-tutorial-notes\\oop\\oop.csproj",
+      "projectPath": "C:\\Users\\hakan\\OneDrive\\Belgeler\\Github_Repositories\\gy-tutorial-notes\\oop\\oop.csproj",
       "packagesPath": "C:\\Users\\hakan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hakan\\OneDrive\\Belgeler\\Github Repositories\\gy-tutorial-notes\\oop\\obj\\",
+      "outputPath": "C:\\Users\\hakan\\OneDrive\\Belgeler\\Github_Repositories\\gy-tutorial-notes\\oop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
