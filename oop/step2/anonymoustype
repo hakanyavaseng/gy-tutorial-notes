@@ -22,7 +22,11 @@ Console.WriteLine(person.GetType().FullName);
 //Can be used while transferring data between API and client
 
 
-
+//Using dynamic keyword with anonymoustype, we can send anonymoustype objects to methods.
+void WritePerson(dynamic person)
+{
+    Console.WriteLine(person.Name + " " + person.Age);
+}
 
 
 
