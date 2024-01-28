@@ -21,9 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "24_Many-to-Many", "..\24_Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "25_Saving-Related-Data", "..\25_Saving-Related-Data\25_Saving-Related-Data.csproj", "{B9A74B4B-67E6-4132-9E1C-6EE4395A0B45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "26_Updating-Related-Data", "..\26_Updating-Related-Data\26_Updating-Related-Data.csproj", "{F89BFF01-2B1C-4E50-A958-C747424ACAD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "26_Updating-Related-Data", "..\26_Updating-Related-Data\26_Updating-Related-Data.csproj", "{F89BFF01-2B1C-4E50-A958-C747424ACAD8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "27_Deleting-Relating-Data", "..\27_Deleted-Relating-Data\27_Deleting-Relating-Data.csproj", "{B8DC7504-3519-40B4-863E-BEB05C225289}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "28_Backing-Fields", "..\28_Backing-Fields\28_Backing-Fields.csproj", "{BB9087CD-DDBB-41E9-B98B-A5490333C20D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{B8DC7504-3519-40B4-863E-BEB05C225289}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8DC7504-3519-40B4-863E-BEB05C225289}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8DC7504-3519-40B4-863E-BEB05C225289}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB9087CD-DDBB-41E9-B98B-A5490333C20D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB9087CD-DDBB-41E9-B98B-A5490333C20D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB9087CD-DDBB-41E9-B98B-A5490333C20D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB9087CD-DDBB-41E9-B98B-A5490333C20D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
