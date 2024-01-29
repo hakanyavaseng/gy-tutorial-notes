@@ -27,7 +27,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "27_Deleting-Relating-Data",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "28_Backing-Fields", "..\28_Backing-Fields\28_Backing-Fields.csproj", "{BB9087CD-DDBB-41E9-B98B-A5490333C20D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "29_Shadow-Properties", "..\29_Shadow-Properties\29_Shadow-Properties.csproj", "{027214FF-507A-4E5B-8B30-43952B9F3E92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "29_Shadow-Properties", "..\29_Shadow-Properties\29_Shadow-Properties.csproj", "{027214FF-507A-4E5B-8B30-43952B9F3E92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core_Configurations", "..\EF_Core_Configurations\EF_Core_Configurations.csproj", "{739DDB6E-6049-4133-B51D-74940712342E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{027214FF-507A-4E5B-8B30-43952B9F3E92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{027214FF-507A-4E5B-8B30-43952B9F3E92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{027214FF-507A-4E5B-8B30-43952B9F3E92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{739DDB6E-6049-4133-B51D-74940712342E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{739DDB6E-6049-4133-B51D-74940712342E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{739DDB6E-6049-4133-B51D-74940712342E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{739DDB6E-6049-4133-B51D-74940712342E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
