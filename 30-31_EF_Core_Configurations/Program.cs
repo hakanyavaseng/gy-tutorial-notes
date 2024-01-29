@@ -98,8 +98,7 @@ Console.WriteLine();
 #endregion
 #endregion
 
-
-#region Configurations | Fluent API
+#region 31 - Configurations | Fluent API
 
 #region Composite Key
 //Tablolarda birden fazla kolonu kümülatif olarak primary key yapmak istiyorsak buna composite key denir.
@@ -122,7 +121,8 @@ Console.WriteLine();
 #endregion
 
 #region HasComputedColumnSql
-//Tablolarda birden fazla kolondaki veirleri işleyerek değerini oluşturan kolonlara Computed Column denmektedir. EF Core üzerinden bu tarz computed column oluşturabilmek için kullanıolan bir yapılandırmadır.
+//Tablolarda birden fazla kolondaki veirleri işleyerek değerini oluşturan kolonlara Computed Column denmektedir.
+//EF Core üzerinden bu tarz computed column oluşturabilmek için kullanılan bir yapılandırmadır.
 #endregion
 
 #region HasConstraintName
@@ -130,14 +130,15 @@ Console.WriteLine();
 #endregion
 
 #region HasData
-//Sonraki derslerimizde Seed Data isimli bir konuyu incleyeceğiz. Bu konuda migrate sürecinde veritabanını inşa ederken bir yandan da yazılım üzerinden hazır veriler oluşturmak istiyorsak eğer buunun yöntemini usulünü inceliyor olacağız.
-//İşte HasData konfigürasyonu bu operasyonun yapılandırma ayağıdır.
-//HasData ile migrate sürecinde oluşturulacak olan verilerin pk olan id kolonlarına iradeli bir şekilde değerlerin girilmesi zorunludur!
+//Sonraki derslerimizde Seed Data isimli bir konuyu incleyeceğiz.
+//Bu konuda migrate sürecinde veritabanını inşa ederken bir yandan da yazılım üzerinden hazır veriler oluşturmak istiyorsak,
+//Bunun yöntemini usulünü inceliyor olacağız. İşte HasData konfigürasyonu bu operasyonun yapılandırma ayağıdır.
+//!HasData ile migrate sürecinde oluşturulacak olan verilerin pk olan id kolonlarına iradeli bir şekilde değerlerin girilmesi zorunludur!
 #endregion
 
 #region HasDiscriminator
-//İleride entityler arasında kalıtımsal ilişkilerin olduğu TPT ve TPH isminde konuları inceliyor olacağız. İşte bu konularla ilgili yapılandırmalarımız HasDiscriminator ve HasValue fonksiyonlarıdır.
-
+//İleride entityler arasında kalıtımsal ilişkilerin olduğu TPT ve TPH isminde konuları inceliyor olacağız.
+//İşte bu konularla ilgili yapılandırmalarımız HasDiscriminator ve HasValue fonksiyonlarıdır.
 #region HasValue
 
 #endregion
@@ -153,17 +154,12 @@ Console.WriteLine();
 #endregion
 
 #region HasIndex
-//Sonraki derslerimizde EF Core üzerinden Index yapılanmasını detaylıca inceliyor olacağız.
-//Bu ypılanmaya dair konfigürasyonlarımız HasIndex ve Index attribute'dur.
+//Ibdex yapılanmasına dair konfigürasyonlarımız HasIndex ve Index attribute'dur.
 #endregion
 
 #region HasQueryFilter
-//İleride göreceğimiz Global QUery Filter başlıklı dersimizin yapılandırmasıdır.
+//Global Query Filter yapılandırmasıdır.
 //Temeldeki görevi bir entitye karşılık uygulama bazında global bir filtre koymaktır.
-#endregion
-
-#region DatabaseGenerated - ValueGeneratedOnAddOrUpdate, ValueGeneratedOnAdd, ValueGeneratedNever
-
 #endregion
 #endregion
 
@@ -205,17 +201,58 @@ class Department
 
 	public ICollection<Person> Persons { get; set; }
 }
+public class Flight
+{
+	public int FlightID { get; set; }
+	public int DepartureAirportId { get; set; }
+	public int ArrivalAirportId { get; set; }
+	public string Name { get; set; }
+
+	public Airport DepartureAirport { get; set; }
+	public Airport ArrivalAirport { get; set; }
+}
+public class Airport
+{
+	public int AirportID { get; set; }
+	public string Name { get; set; }
+	
+	[InverseProperty(nameof(Flight.DepartureAirport))]
+	public virtual ICollection<Flight> DepartingFlights { get; set; }
+
+	[InverseProperty(nameof(Flight.ArrivalAirport))]
+	public virtual ICollection<Flight> ArrivingFlights { get; set; }
+}
+
+ class Entity
+{
+	public int Id { get; set; }
+    public string X { get; set; }
+}
+
+class A : Entity
+{
+	public string Y { get; set; }
+}	
+
+class B : Entity
+{
+	public string Z { get; set; }
+}
 
 class ApplicationDbContext : DbContext
 {
+	//public DbSet<Entity> Entities { get; set; }
+	//public DbSet<A> As { get; set; }
+	//public DbSet<B> Bs { get; set; }
 	public DbSet<Person> Persons { get; set; }
 	public DbSet<Department> Departments { get; set; }
-	
+
 	//public DbSet<Flight> Flights { get; set; }
 	//public DbSet<Airport> Airports { get; set; }
 
 	protected override void OnModelCreating(ModelBuilder modelBuilder)
 	{
+		//Ders 30
 		#region GetEntityTypes
 		/*
 		var entities = modelBuilder.Model.GetEntityTypes();
@@ -303,13 +340,15 @@ class ApplicationDbContext : DbContext
 		//    .IsConcurrencyToken();
 		#endregion
 
+		//Ders 31
+
 		#region CompositeKey
 		//modelBuilder.Entity<Person>().HasKey("Id", "Id2");
 		//modelBuilder.Entity<Person>().HasKey(p => new { p.Id, p.Id2 });
 		#endregion
 
 		#region HasDefaultSchema
-		//modelBuilder.HasDefaultSchema("ahmet");
+		//modelBuilder.HasDefaultSchema("DefaultSchema");
 		#endregion
 
 		#region Property
@@ -339,36 +378,43 @@ class ApplicationDbContext : DbContext
 		//    .HasOne(p => p.Department)
 		//    .WithMany(d => d.Persons)
 		//    .HasForeignKey(p => p.DepartmentId)
-		//    .HasConstraintName("ahmet");
+		//    .HasConstraintName("ExampleConstraint");
 		#endregion
 
 		#region HasData
-		//modelBuilder.Entity<Department>().HasData(
-		//    new Department()
-		//    {
-		//        Name = "asd",
-		//        Id = 1
-		//    });
-		//modelBuilder.Entity<Person>().HasData(
-		//    new Person
-		//    {
-		//        Id = 1,
-		//        DepartmentId = 1,
-		//        Name = "ahmet",
-		//        Surname = "filanca",
-		//        Salary = 100,
-		//        CreatedDate = DateTime.Now
-		//    },
-		//    new Person
-		//    {
-		//        Id = 2,
-		//        DepartmentId = 1,
-		//        Name = "mehmet",
-		//        Surname = "filanca",
-		//        Salary = 200,
-		//        CreatedDate = DateTime.Now
-		//    }
-		//    );
+		/*
+		modelBuilder.Entity<Department>().HasData(
+			new Department { 
+				Id = 1,
+				Name = "IT" },
+			new Department { 
+				Id = 2, 
+				Name = "RE" }
+			);
+		
+		modelBuilder.Entity<Person>()
+			.HasData(
+			new Person
+			{
+				Id = 1, // Id'yi kendimiz vermek zorundayız.
+				Department = 1,
+				Name = "Hakan",
+				Surname = "Yavaş",
+				Salary = 1000,
+				CreatedDate = DateTime.Now,
+			},
+			new Person
+			{
+				Id = 2,
+				Department = 2,
+				Name = "Alperen",
+				Surname = "Günes",
+				Salary = 1000,
+				CreatedDate = DateTime.Now,
+			}
+
+			);
+		*/
 		#endregion
 
 		#region HasDiscriminator
@@ -406,27 +452,4 @@ class ApplicationDbContext : DbContext
 	{
 		optionsBuilder.UseSqlServer("Server=localhost, 1433;Database=ApplicationDb;User ID=SA;Password=1q2w3e4r+!");
 	}
-}
-
-public class Flight
-{
-	public int FlightID { get; set; }
-	public int DepartureAirportId { get; set; }
-	public int ArrivalAirportId { get; set; }
-	public string Name { get; set; }
-
-	public Airport DepartureAirport { get; set; }
-	public Airport ArrivalAirport { get; set; }
-}
-
-public class Airport
-{
-	public int AirportID { get; set; }
-	public string Name { get; set; }
-	
-	[InverseProperty(nameof(Flight.DepartureAirport))]
-	public virtual ICollection<Flight> DepartingFlights { get; set; }
-
-	[InverseProperty(nameof(Flight.ArrivalAirport))]
-	public virtual ICollection<Flight> ArrivingFlights { get; set; }
 }
