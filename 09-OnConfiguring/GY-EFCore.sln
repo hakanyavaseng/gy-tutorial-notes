@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "36_Table-Per-Hierarchy", ".
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "37_Table-Per-Type", "..\37_Table-Per-Type\37_Table-Per-Type.csproj", "{FC6AE47F-7A54-46C5-8CC5-14B88E639AF7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "39_Constraints", "..\39_Constraints\39_Constraints.csproj", "{BE44FA53-E1C8-47B3-8776-2E3D709BA745}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{FC6AE47F-7A54-46C5-8CC5-14B88E639AF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC6AE47F-7A54-46C5-8CC5-14B88E639AF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC6AE47F-7A54-46C5-8CC5-14B88E639AF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE44FA53-E1C8-47B3-8776-2E3D709BA745}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE44FA53-E1C8-47B3-8776-2E3D709BA745}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE44FA53-E1C8-47B3-8776-2E3D709BA745}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE44FA53-E1C8-47B3-8776-2E3D709BA745}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
