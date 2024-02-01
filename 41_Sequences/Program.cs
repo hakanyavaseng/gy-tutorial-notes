@@ -84,4 +84,4 @@ class ApplicationDbContext : DbContext
 		optionsBuilder.UseSqlServer(@"Server =.\SQLEXPRESS; Database = SeqDb; Trusted_Connection = True; ");
 	}
 }
-#endregion
+#endregions
