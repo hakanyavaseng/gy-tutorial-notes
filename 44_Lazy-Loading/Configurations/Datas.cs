@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _43_Explicit_Loading.Configurations
+namespace _44_Lazy_Loading.Configurations
 {
 	public class EmployeeData : IEntityTypeConfiguration<Employee>
 	{
