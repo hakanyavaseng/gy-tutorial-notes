@@ -10,7 +10,7 @@ Console.WriteLine();
 #endregion
 
 #region IEntityTypeConfiguration<T> Arayüzü
-//Entity bazlı yapılacak olan konfigürasyonları, o entitye özel harici bir soya üzerinde yapmamızı sağlayan bir arayüzdür.
+//Entity bazlı yapılacak olan konfigürasyonları, o entitye özel harici bir dosya üzerinde yapmamızı sağlayan bir arayüzdür.
 
 //Harici bir dosyada konfigürasyonların yürütülmesi, merkezi bir yönetim noktası oluşturulmasını sağlar.
 #endregion
@@ -27,7 +27,7 @@ Console.WriteLine();
 class Order
 {
 	public int OrderId { get; set; }
-    public string Description { get; set; }
+	public string Description { get; set; }
 	public DateTime OrderDate { get; set; }	
 }
 
