@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumerations", "Enumerations.csproj", "{73892084-B91C-4405-A765-F0FB0A7FCDB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumerations", "Enumerations.csproj", "{73892084-B91C-4405-A765-F0FB0A7FCDB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Static", "..\Static_Lecture\Static.csproj", "{26E21641-B9F7-4065-8D44-0870950ADBC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{73892084-B91C-4405-A765-F0FB0A7FCDB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73892084-B91C-4405-A765-F0FB0A7FCDB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73892084-B91C-4405-A765-F0FB0A7FCDB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26E21641-B9F7-4065-8D44-0870950ADBC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26E21641-B9F7-4065-8D44-0870950ADBC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26E21641-B9F7-4065-8D44-0870950ADBC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26E21641-B9F7-4065-8D44-0870950ADBC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
