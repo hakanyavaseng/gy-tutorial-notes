@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using System.Data;
 using System.Reflection;
 
 ApplicationDbContext context = new();
@@ -50,20 +51,20 @@ Console.WriteLine();
 #region Nasıl Konfigüre Edilir?
 //Microsoft.Extensions.Logging.Console
 
-await context.Persons.ToListAsync();
+//await context.Persons.ToListAsync();
 /*
      info: Microsoft.EntityFrameworkCore.Database.Command[20101]
           Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
           SELECT [p].[PersonId], [p].[Name]
           FROM [Persons] AS [p]
 */
-
+/*
 await context.Persons
     .Include(p => p.Orders)
     .Where(p => p.Name.Contains("a"))
     .Select(p => new { p.Name, p.PersonId })
     .ToListAsync();
-/*
+
     info: Microsoft.EntityFrameworkCore.Database.Command[20101]
           Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
           SELECT [p].[Name], [p].[PersonId]
@@ -90,6 +91,60 @@ await context.Persons
 
 #endregion
 
+#region Ders 54 - Query Tag
+
+#region Query Tag Nedir?
+//EF Core ile generate edilen sorgulara açıklama eklememizi sağlayarak; SQL Profiler, Query Log vb yapılarda bu açıklamalar
+//eşliğinde sorguları gözlemlememizi sağlayan bir özelliktir.
+#endregion
+
+#region TagWith methodu & Multiple TagWith
+await context.Persons.TagWith("Gets all persons").ToListAsync();
+
+/*
+     info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+          Executed DbCommand (46ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+          -- Gets all persons
+
+          SELECT [p].[PersonId], [p].[Name]
+          FROM [Persons] AS [p]
+*/
+
+await context.Persons
+    .TagWith("Gets all persons")
+    .Include(p=>p.Orders)
+    .TagWith("Add orders")
+    .ToListAsync();
+/*
+    info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+          Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+          -- Gets all persons
+          -- Add orders
+
+          SELECT [p].[PersonId], [p].[Name], [o].[OrderId], [o].[Description], [o].[PersonId], [o].[Price]
+          FROM [Persons] AS [p]
+          LEFT JOIN [Orders] AS [o] ON [p].[PersonId] = [o].[PersonId]
+          ORDER BY [p].[PersonId]
+
+*/
+#endregion
+
+#region TagWithCallSite Methodu
+//Oluşturulan sorguya açıklama satırı ekler ve bu sorgunun hangi satırda oluşturulduğu bilgisini verir.
+
+await context.Persons.TagWithCallSite("Gets all persons").ToListAsync();
+/*
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand(1ms) [Parameters = [], CommandType = 'Text', CommandTimeout = '30']
+      -- File: Gets all persons: 134
+
+      SELECT[p].[PersonId], [p].[Name]
+      FROM[Persons] AS[p]
+*/
+#endregion
+
+
+#endregion
 public class Person
 {
     public int PersonId { get; set; }
@@ -124,7 +179,7 @@ class ApplicationDbContext : DbContext
     //Ders 52
     //StreamWriter _log = new("logs.txt", append: true);
 
-    //Ders 53
+    //Ders 53 
     readonly ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
     {
         builder.AddConsole(); //Microsoft.Extensions.Logging.Console ile gelmektedir.
