@@ -1,12 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using System.Reflection;
 
 ApplicationDbContext context = new();
-var datas = await context.Persons.ToListAsync();
 Console.WriteLine();
 
+#region Ders 52 - Logging
 #region Neden Loglama Yapılır?
 //Çalışan bir sistemin runtimeda nasıl davranış gerçekleştirdiğini gözlemlemek için Log mekanizamaları kullanılır.
 #endregion
@@ -40,6 +39,56 @@ Console.WriteLine();
 #region Log Levels
 //optionsBuilder.LogTo(async message => await _log.WriteLineAsync(message), LogLevel.Error);
 #endregion
+#endregion
+
+#region Ders 53 - Query Log
+
+#region Query Log Nedir?
+//LINQ sorguları neticesinde generate edilen sorguları izleyebilmek ve olası teknik hataları ayıklayabilmek amacıyla query log mekanizması kullanılır
+#endregion
+
+#region Nasıl Konfigüre Edilir?
+//Microsoft.Extensions.Logging.Console
+
+await context.Persons.ToListAsync();
+/*
+     info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+          Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+          SELECT [p].[PersonId], [p].[Name]
+          FROM [Persons] AS [p]
+*/
+
+await context.Persons
+    .Include(p => p.Orders)
+    .Where(p => p.Name.Contains("a"))
+    .Select(p => new { p.Name, p.PersonId })
+    .ToListAsync();
+/*
+    info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+          Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+          SELECT [p].[Name], [p].[PersonId]
+          FROM [Persons] AS [p]
+          WHERE [p].[Name] LIKE N'%a%'
+*/
+
+#endregion
+
+#region Loglama Sürecinde Filtreleme Nasıl Yapılır?
+//Belirli seviyelerdeki logları filtrelemek için kullanılır.
+/*
+  readonly ILoggerFactory loggerFactoryWithFilter = LoggerFactory.Create(builder =>
+    {
+        builder.AddFilter((category, level) =>
+        {
+           return category == DbLoggerCategory.Database.Command.Name && level == LogLevel.Information;
+        })
+        .AddConsole(); //Microsoft.Extensions.Logging.Console ile gelmektedir.
+    });
+*/
+#endregion
+
+
+#endregion
 
 public class Person
 {
@@ -71,21 +120,44 @@ class ApplicationDbContext : DbContext
 
     
     }
-    StreamWriter _log = new("logs.txt", append: true);
 
+    //Ders 52
+    //StreamWriter _log = new("logs.txt", append: true);
+
+    //Ders 53
+    readonly ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
+    {
+        builder.AddConsole(); //Microsoft.Extensions.Logging.Console ile gelmektedir.
+    });
+
+    readonly ILoggerFactory loggerFactoryWithFilter = LoggerFactory.Create(builder =>
+    {
+        builder.AddFilter((category, level) =>
+        {
+           return category == DbLoggerCategory.Database.Command.Name && level == LogLevel.Information;
+        })
+        .AddConsole(); //Microsoft.Extensions.Logging.Console ile gelmektedir.
+    });
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=LoggingDb;Trusted_Connection=true;TrustServerCertificate=True;");
 
+        /* Ders 52
         //optionsBuilder.LogTo(Console.WriteLine);
         //optionsBuilder.LogTo(message => Debug.WriteLine(message));
         //optionsBuilder.LogTo(async message => await _log.WriteLineAsync(message));
         //optionsBuilder.LogTo(Console.WriteLine).EnableSensitiveDataLogging();
         //optionsBuilder.LogTo(Console.WriteLine).EnableDetailedErrors();
-        optionsBuilder.LogTo(async message => await _log.WriteLineAsync(message),LogLevel.Error);
+        //optionsBuilder.LogTo(async message => await _log.WriteLineAsync(message),LogLevel.Error);
+        */
+
+optionsBuilder.UseLoggerFactory(loggerFactory);
+
+
 
     }
 
+    /*Ders 52
     public override void Dispose()
     {
         base.Dispose();
@@ -98,4 +170,5 @@ class ApplicationDbContext : DbContext
         await _log.DisposeAsync();
 
     }
+    */
 }
