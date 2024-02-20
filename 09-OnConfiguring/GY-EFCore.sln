@@ -61,7 +61,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "47_Views", "..\47_Views\47_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "48_Stored-Procedures", "..\48_Stored-Procedures\48_Stored-Procedures.csproj", "{58F38D4C-1473-46B6-A1F1-40CDC561744A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "50_Database-Property", "..\50_Database-Property\50_Database-Property.csproj", "{CDF80B6F-0239-45A1-A584-DAE3F33C575A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "50_Database-Property", "..\50_Database-Property\50_Database-Property.csproj", "{CDF80B6F-0239-45A1-A584-DAE3F33C575A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "51_Keyless-Entity-Types", "..\51_Keyless-Entity-Types\51_Keyless-Entity-Types.csproj", "{2B8FC549-E8EC-479E-BA71-E32ECC073666}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -189,6 +191,10 @@ Global
 		{CDF80B6F-0239-45A1-A584-DAE3F33C575A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDF80B6F-0239-45A1-A584-DAE3F33C575A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDF80B6F-0239-45A1-A584-DAE3F33C575A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B8FC549-E8EC-479E-BA71-E32ECC073666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B8FC549-E8EC-479E-BA71-E32ECC073666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B8FC549-E8EC-479E-BA71-E32ECC073666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B8FC549-E8EC-479E-BA71-E32ECC073666}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
