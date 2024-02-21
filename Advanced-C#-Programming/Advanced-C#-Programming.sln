@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_Ref-Return&Ref-Local", "02_Ref-Return&Ref-Local\02_Ref-Return&Ref-Local.csproj", "{3221F978-9621-4DDF-8D69-17C418F76C12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_Ref-Return&Ref-Local", "02_Ref-Return&Ref-Local\02_Ref-Return&Ref-Local.csproj", "{3221F978-9621-4DDF-8D69-17C418F76C12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Operator-Overloading", "03_Operator-Overloading\03_Operator-Overloading.csproj", "{DDACA84E-52D6-4932-8F51-94E44D0B8FAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3221F978-9621-4DDF-8D69-17C418F76C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3221F978-9621-4DDF-8D69-17C418F76C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3221F978-9621-4DDF-8D69-17C418F76C12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDACA84E-52D6-4932-8F51-94E44D0B8FAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDACA84E-52D6-4932-8F51-94E44D0B8FAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDACA84E-52D6-4932-8F51-94E44D0B8FAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDACA84E-52D6-4932-8F51-94E44D0B8FAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
