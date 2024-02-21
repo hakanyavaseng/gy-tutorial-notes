@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using System.Data;
 using System.Reflection;
+using System.Reflection.Emit;
 
 ApplicationDbContext context = new();
 Console.WriteLine();
@@ -145,10 +146,44 @@ info: Microsoft.EntityFrameworkCore.Database.Command[20101]
 
 
 #endregion
+
+#region Ders 55 - Global Query Filters 
+
+#region Global Query Filters Nedir?
+//Bir entity'e özel, uygulama seviyesinde şartlar oluşturmamızı ve böylece verileri global şekilde filtrelemeyi sağlayan bir özelliktir.
+//Böylece belirtilen entity üzerinden yapılan tüm sorgularda ekstradan şart ifadesine gerek kalmaksınız filtreleri otomatik uygulayarak hızlı sorgulama yapmayı sağlar.
+//Örneğin IsActive, IsDeleted gibi özellikler her seferinde yazılmaktansa global olarak tanımlanabilir.
+//MultiTenancy uygulamalarda TenantId vs. tanımlarken kullanılabilir.
+#endregion
+
+#region Global Query Filters Nasıl Uygulanır?
+//=> OnConfiguring 
+//modelBuilder.Entity<Person>()
+//.HasQueryFilter(p => p.IsActive);
+#endregion
+
+#region Navigation Property Üzerinden Kullanım 
+//modelBuilder.Entity<Person>()
+//       .HasQueryFilter(p => p.Orders.Count > 0);
+#endregion
+
+#region Global Query Filters Nasıl Ignore Edilir?
+//await context.Persons.IgnoreQueryFilters().ToListAsync(); => Bu sorguda global filter ignore edilir.
+#endregion
+
+#region Dikkat!
+//Global Query Filter uygulanmış bir kolona tekrardan şart uygulanabilir, buna dikkat edilmelidir. Maliyet artabilir.
+
+//await context.Persons.Where(p=>p.IsActive).ToListAsync();
+#endregion
+
+
+#endregion
 public class Person
 {
     public int PersonId { get; set; }
     public string Name { get; set; }
+    public bool IsActive { get; set; }
     public ICollection<Order> Orders { get; set; }
 }
 public class Order
@@ -173,13 +208,21 @@ class ApplicationDbContext : DbContext
             .WithOne(o => o.Person)
             .HasForeignKey(o => o.PersonId);
 
-    
+        modelBuilder.Entity<Person>()
+            .HasQueryFilter(p => p.IsActive);
+
+        modelBuilder.Entity<Person>()
+        .HasQueryFilter(p => p.Orders.Count > 0);
+
+
+
+
     }
 
     //Ders 52
     //StreamWriter _log = new("logs.txt", append: true);
 
-    //Ders 53 
+    /*Ders 53 
     readonly ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
     {
         builder.AddConsole(); //Microsoft.Extensions.Logging.Console ile gelmektedir.
@@ -193,6 +236,7 @@ class ApplicationDbContext : DbContext
         })
         .AddConsole(); //Microsoft.Extensions.Logging.Console ile gelmektedir.
     });
+    */
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=LoggingDb;Trusted_Connection=true;TrustServerCertificate=True;");
@@ -205,10 +249,9 @@ class ApplicationDbContext : DbContext
         //optionsBuilder.LogTo(Console.WriteLine).EnableDetailedErrors();
         //optionsBuilder.LogTo(async message => await _log.WriteLineAsync(message),LogLevel.Error);
         */
-
-optionsBuilder.UseLoggerFactory(loggerFactory);
-
-
+        
+        
+        //optionsBuilder.UseLoggerFactory(loggerFactory); => Ders 53
 
     }
 
