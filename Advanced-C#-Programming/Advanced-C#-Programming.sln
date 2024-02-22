@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_Ref-Return&Ref-Local", "02_Ref-Return&Ref-Local\02_Ref-Return&Ref-Local.csproj", "{3221F978-9621-4DDF-8D69-17C418F76C12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_Ref-Return&Ref-Local", "02_Ref-Return&Ref-Local\03_Ref-Return&Ref-Local.csproj", "{3221F978-9621-4DDF-8D69-17C418F76C12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Operator-Overloading", "03_Operator-Overloading\03_Operator-Overloading.csproj", "{DDACA84E-52D6-4932-8F51-94E44D0B8FAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04_Operator-Overloading", "03_Operator-Overloading\04_Operator-Overloading.csproj", "{DDACA84E-52D6-4932-8F51-94E44D0B8FAB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05_Implicit-Explicit-Operator-Overloading", "05_Implicit-Explicit-Operator-Overloading\05_Implicit-Explicit-Operator-Overloading.csproj", "{C819696E-9973-41F8-811C-FEAB06F7573A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_Exception-Handling", "06_Exception-Handling\06_Exception-Handling.csproj", "{B49C39D9-AA47-4659-A479-81B979ABC70C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{DDACA84E-52D6-4932-8F51-94E44D0B8FAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDACA84E-52D6-4932-8F51-94E44D0B8FAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDACA84E-52D6-4932-8F51-94E44D0B8FAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C819696E-9973-41F8-811C-FEAB06F7573A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C819696E-9973-41F8-811C-FEAB06F7573A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C819696E-9973-41F8-811C-FEAB06F7573A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C819696E-9973-41F8-811C-FEAB06F7573A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B49C39D9-AA47-4659-A479-81B979ABC70C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B49C39D9-AA47-4659-A479-81B979ABC70C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B49C39D9-AA47-4659-A479-81B979ABC70C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B49C39D9-AA47-4659-A479-81B979ABC70C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
