@@ -6,3 +6,10 @@ You can check the playlist at this link: => <a href="https://www.youtube.com/pla
 ## Lecture 56 - Owned Entity Types and Table Splitting
 <a target="blank" href="https://www.gencayyildiz.com/blog/entity-framework-core-owned-entities-and-table-splitting/">Entity Framework Core – Owned Entities and Table Splitting - Blog</a>
 
+## Lecture 57 - Temporal Tables
+<a target="blank" href="https://www.gencayyildiz.com/blog/sql-server-2016-temporal-tables/">SQL Server 2016 Temporal Tables - Blog</a><br>
+<a target="blank" href="https://www.gencayyildiz.com/blog/entity-framework-core-temporal-tables-ile-calismak/">Entity Framework Core – Temporal Tables İle Çalışmak - Blog</a>
+
+
+
+
