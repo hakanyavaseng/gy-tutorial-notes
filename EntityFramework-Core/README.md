@@ -23,6 +23,5 @@ You can check the playlist at this link: => <a href="https://www.youtube.com/pla
 ## Lecture 62 - In Memory Database
 <a target="blank" href="https://learn.microsoft.com/en-us/ef/core/providers/in-memory/?tabs=dotnet-core-cli">Using Transactions - Microsoft</a><br>
 
-<a target="blank" href="https://www.gencayyildiz.com/blog/entity-framework-core-ile-in-memoryde-calismak/">Entity Framework Core İle In-Memory’de Çalışmak
- - Gençay Yıldız Blog</a><br>
+<a target="blank" href="https://www.gencayyildiz.com/blog/entity-framework-core-ile-in-memoryde-calismak/">Entity Framework Core İle In-Memory’de Çalışmak - Gençay Yıldız Blog</a><br>
 
