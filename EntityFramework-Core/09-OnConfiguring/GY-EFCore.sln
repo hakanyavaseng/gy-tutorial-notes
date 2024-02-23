@@ -73,7 +73,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "57_Temporal-Tables", "..\57
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "58_Connection-Resiliency", "..\58_Connection-Resiliency\58_Connection-Resiliency.csproj", "{5EFB2B8A-C411-4DDB-AC49-04B457AE7282}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "61_Transactions", "..\61_Transactions\61_Transactions.csproj", "{C13491B5-6612-47D3-BF6C-CDECB8553175}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "61_Transactions", "..\61_Transactions\61_Transactions.csproj", "{C13491B5-6612-47D3-BF6C-CDECB8553175}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "62_In-Memory-Database", "..\62_In-Memory-Database\62_In-Memory-Database.csproj", "{0BB85392-A51D-4A87-9D9A-3EE324607F8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -225,6 +227,10 @@ Global
 		{C13491B5-6612-47D3-BF6C-CDECB8553175}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C13491B5-6612-47D3-BF6C-CDECB8553175}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C13491B5-6612-47D3-BF6C-CDECB8553175}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BB85392-A51D-4A87-9D9A-3EE324607F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BB85392-A51D-4A87-9D9A-3EE324607F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BB85392-A51D-4A87-9D9A-3EE324607F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BB85392-A51D-4A87-9D9A-3EE324607F8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
