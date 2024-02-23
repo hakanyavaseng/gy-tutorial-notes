@@ -71,7 +71,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "56_Owned-Entities-and-Table
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "57_Temporal-Tables", "..\57_Temporal-Tables\57_Temporal-Tables.csproj", "{5DE366A2-64E2-4D91-BDE7-5F03D5B55A12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "58_Connection-Resiliency", "..\58_Connection-Resiliency\58_Connection-Resiliency.csproj", "{5EFB2B8A-C411-4DDB-AC49-04B457AE7282}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "58_Connection-Resiliency", "..\58_Connection-Resiliency\58_Connection-Resiliency.csproj", "{5EFB2B8A-C411-4DDB-AC49-04B457AE7282}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "61_Transactions", "..\61_Transactions\61_Transactions.csproj", "{C13491B5-6612-47D3-BF6C-CDECB8553175}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -219,6 +221,10 @@ Global
 		{5EFB2B8A-C411-4DDB-AC49-04B457AE7282}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EFB2B8A-C411-4DDB-AC49-04B457AE7282}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EFB2B8A-C411-4DDB-AC49-04B457AE7282}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C13491B5-6612-47D3-BF6C-CDECB8553175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C13491B5-6612-47D3-BF6C-CDECB8553175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C13491B5-6612-47D3-BF6C-CDECB8553175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C13491B5-6612-47D3-BF6C-CDECB8553175}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
