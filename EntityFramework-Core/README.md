@@ -16,5 +16,8 @@ You can check the playlist at this link: => <a href="https://www.youtube.com/pla
 <a target="blank" href="https://www.gencayyildiz.com/blog/entity-framework-core-connection-resiliency/">Connection Resiliency - Gençay Yıldız Blog</a>
 
 
+## Lecture 61 - Transactions
+
+<a target="blank" href="https://learn.microsoft.com/en-us/ef/core/saving/transactions">Using Transactions - Microsoft</a><br>
 
 
