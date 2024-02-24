@@ -25,3 +25,12 @@ You can check the playlist at this link: => <a href="https://www.youtube.com/pla
 
 <a target="blank" href="https://www.gencayyildiz.com/blog/entity-framework-core-ile-in-memoryde-calismak/">Entity Framework Core İle In-Memory’de Çalışmak - Gençay Yıldız Blog</a><br>
 
+## Lecture 63 - Efficient Querying
+<a target="blank" href="https://learn.microsoft.com/tr-tr/ef/core/performance/efficient-querying">Efficient Querying- Microsoft</a><br>
+
+## Lecture 64 - EF Core 7 News
+<a target="blank" href="https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-7.0/whatsnew">What's New in EF Core 7.0- Microsoft</a><br>
+
+
+
+
