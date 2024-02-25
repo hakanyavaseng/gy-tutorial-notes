@@ -15,6 +15,9 @@ You can check the playlist at this link: => <a href="https://www.youtube.com/pla
 <a target="blank" href="https://learn.microsoft.com/en-us/ef/core/miscellaneous/connection-resiliency">Connection Resiliency - Microsoft</a><br>
 <a target="blank" href="https://www.gencayyildiz.com/blog/entity-framework-core-connection-resiliency/">Connection Resiliency - Gençay Yıldız Blog</a>
 
+## Lecture 59 - Data Concurrency
+<a target="blank" href="https://www.gencayyildiz.com/blog/entity-framework-core-data-concurrency/">Entity Framework Core – Data Concurrency - Gençay Yıldız Blog</a><br>
+<a target="blank" href="https://learn.microsoft.com/en-us/ef/core/saving/concurrency?tabs=data-annotations">Handling Concurrency Conflicts - Microsoft </a>
 
 ## Lecture 61 - Transactions
 
