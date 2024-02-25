@@ -19,6 +19,9 @@ You can check the playlist at this link: => <a href="https://www.youtube.com/pla
 <a target="blank" href="https://www.gencayyildiz.com/blog/entity-framework-core-data-concurrency/">Entity Framework Core – Data Concurrency - Gençay Yıldız Blog</a><br>
 <a target="blank" href="https://learn.microsoft.com/en-us/ef/core/saving/concurrency?tabs=data-annotations">Handling Concurrency Conflicts - Microsoft </a>
 
+## Lecture 60 - Value Conversions
+<a target="blank" href="//https://learn.microsoft.com/en-us/ef/core/modeling/value-conversions?tabs=data-annotations">Value Conversions - Microsoft </a>
+
 ## Lecture 61 - Transactions
 
 <a target="blank" href="https://learn.microsoft.com/en-us/ef/core/saving/transactions">Using Transactions - Microsoft</a><br>
