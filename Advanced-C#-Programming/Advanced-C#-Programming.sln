@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06_Exception-Handling", "06
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07_Dynamic-and-Programmatic-Instance-Creation", "07_Dynamic-and-Programmatic-Instance-Creation\07_Dynamic-and-Programmatic-Instance-Creation.csproj", "{2E034B95-B562-4551-B1B8-EA91AFECE6F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_Generic-Structures", "08_Generic-Structures\08_Generic-Structures.csproj", "{0DB34648-57F5-465A-9525-27050321688C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08_Generic-Structures", "08_Generic-Structures\08_Generic-Structures.csproj", "{0DB34648-57F5-465A-9525-27050321688C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09_Covariance-Contravariance", "09_Covarianca-Contravariance\09_Covariance-Contravariance.csproj", "{66F6C17F-9365-4944-BB63-4D92616966E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{0DB34648-57F5-465A-9525-27050321688C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DB34648-57F5-465A-9525-27050321688C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DB34648-57F5-465A-9525-27050321688C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66F6C17F-9365-4944-BB63-4D92616966E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66F6C17F-9365-4944-BB63-4D92616966E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66F6C17F-9365-4944-BB63-4D92616966E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66F6C17F-9365-4944-BB63-4D92616966E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
