@@ -59,7 +59,6 @@ Console.WriteLine();
 #region BoolToTwoValuesConverter
 #endregion
 #endregion
-//https://learn.microsoft.com/en-us/ef/core/modeling/value-conversions?tabs=data-annotations
 
 #region İlkel Koleksiyonların Serilizasyonu
 //İçerisinde ilkel türlerden olyuşturulmuş koleksiyonları barındıran modelleri migrate etmeye çalıştığımızda hata ile karşılaşmaktayız. By hatadan kurtuılmak ve ilgili veriye koleksiyondaki verileri serilize ederek işleyebilmek için bu koleksiyonu normal metinsel değerlere dönüştürmemize fırsat veren bir conversion operasyonu gerçekleştireibliriz. 
