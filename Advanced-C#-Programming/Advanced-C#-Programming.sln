@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_Predefined-Delegates", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13_Anonymous-Structures", "13_Anonymous-Structures\13_Anonymous-Structures.csproj", "{EACBA9B3-C2E0-4575-8A6A-D52E4BFEAF59}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14_ExpandoObject", "14_Expando-Object\14_ExpandoObject.csproj", "{A45C0AEC-869E-4E84-8184-05112EA73BC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{EACBA9B3-C2E0-4575-8A6A-D52E4BFEAF59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EACBA9B3-C2E0-4575-8A6A-D52E4BFEAF59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EACBA9B3-C2E0-4575-8A6A-D52E4BFEAF59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A45C0AEC-869E-4E84-8184-05112EA73BC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A45C0AEC-869E-4E84-8184-05112EA73BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A45C0AEC-869E-4E84-8184-05112EA73BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A45C0AEC-869E-4E84-8184-05112EA73BC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
