@@ -100,3 +100,36 @@ public class Person : ICloneable
 }
 */
 #endregion
+
+
+#region INotifyPropertyChanged Interface
+//INotifyPropertyChanged interface is used to notify the subscribers when a property is changed. Is generally used in data binding scenarios.
+/*
+Person p = new Person { Name = "Hakan", Age = 22 };
+
+p.PropertyChanged += (sender, e) =>
+{
+    Console.WriteLine($"{e.PropertyName} has been changed.");
+};
+
+p.Age = 25; // Age has been changed.
+public class Person : INotifyPropertyChanged
+{
+    public string Name { get; set; }
+    int age;
+
+    public int Age
+    {
+        get => age;
+        set
+        {
+            age = value;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Age)));
+
+        }
+    }
+    public event PropertyChangedEventHandler? PropertyChanged;
+}
+*/
+#endregion
+
