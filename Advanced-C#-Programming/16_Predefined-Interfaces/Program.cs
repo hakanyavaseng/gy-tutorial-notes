@@ -161,6 +161,7 @@ class Person : IEquatable<Person>
 #endregion
 
 #region IEnumerable Interface
+/*
 //IEnumerable interface gives ability to iterate over a collection. (foreach)
 
 ArrayList list = new();
@@ -199,5 +200,26 @@ public class Market : IEnumerable<string> // No need to implement IEnumerable in
         return list.GetEnumerator();
     }
 }
+*/
+#endregion
+
+#region IDisposable Interface
+//IDisposable interface is used to release unmanaged resources. It gives opportunity to clean up resources when they are no longer needed by using "using" keyword.
+
+class Database : IDisposable
+{
+    //connection, command , reader etc.
+    public void Dispose()
+    {
+        //nullify the resources
+        Console.WriteLine("Database is disposed.");
+    }
+
+    ~Database()
+    {
+        this.Dispose(); 
+    }
+}
+
 
 #endregion
