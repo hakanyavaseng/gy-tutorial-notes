@@ -1,4 +1,5 @@
 ﻿
+using System.Collections;
 using System.ComponentModel;
 
 Console.WriteLine();
@@ -136,7 +137,7 @@ public class Person : INotifyPropertyChanged
 
 #region IEquatable Interface 
 //Records can be used instead of IEquatable interface.
-
+/*
 Person p1 = new Person { Name = "Hakan", Age = 22 };
 Person p2 = new Person { Name = "Hakan", Age = 23 };
 
@@ -154,6 +155,48 @@ class Person : IEquatable<Person>
     public bool Equals(Person? other)
     {
         return Name == other?.Name && Age == other?.Age;
+    }
+}
+*/
+#endregion
+
+#region IEnumerable Interface
+//IEnumerable interface gives ability to iterate over a collection. (foreach)
+
+ArrayList list = new();
+
+foreach (var item in list) // No error
+{
+    Console.WriteLine(item);
+}
+
+Market market = new();
+foreach (var item in market) // Foreach statement cannot operate on variables of type 'Market' because 'Market' does not contain a public instance definition for 'GetEnumerator' (without implementing IEnumerable interface) GetEnumerator method is required to use foreach.
+{
+    Console.WriteLine(item); // Apple, Banana, Orange
+}
+
+
+var result = market.Where(p => p.Contains("o", StringComparison.InvariantCultureIgnoreCase)).ToList(); 
+
+foreach (var item in result)
+{
+    Console.WriteLine(item); // Orange
+}
+
+public class Market : IEnumerable<string> // No need to implement IEnumerable interface if GetEnumerator method is available.
+{
+    List<string> list = new List<string>() { "Apple", "Banana", "Orange" };
+
+    //If there is no GetEnumerator method, it will give an error.
+    public IEnumerator GetEnumerator()
+    {
+        return list.GetEnumerator();
+    }
+
+    IEnumerator<string> IEnumerable<string>.GetEnumerator()
+    {
+        return list.GetEnumerator();
     }
 }
 
