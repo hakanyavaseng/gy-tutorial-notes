@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="signalr.min.js"></script>
+    <script src="jquery.min.js"></script>
+
+    <script>
+        $(document).ready(() => {
+            const connection = new signalR.HubConnectionBuilder()
+            .withUrl("https://localhost:7017/myhub")
+            .build();
+
+            connection.start();
+
+            $("#btnSend").click(() => {
+                let message = $("#txtMessage").val();
+                connection.invoke("SendMessageAsync", message).catch(error => console.log("Error while sending message."));
+            });
+
+            connection.on("recevieMessage", message => {
+                $("div").append(message + "<br/>")
+            })
+
+        });
+    </script>
+</head>
+   
+<body>
+    <input type="text" id="txtMessage"></input>
+    <button id="btnSend">Send</button>
+
+    <div></div>
+</body>
+</html>
