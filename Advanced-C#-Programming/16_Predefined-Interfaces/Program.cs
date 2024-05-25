@@ -133,3 +133,28 @@ public class Person : INotifyPropertyChanged
 */
 #endregion
 
+
+#region IEquatable Interface 
+//Records can be used instead of IEquatable interface.
+
+Person p1 = new Person { Name = "Hakan", Age = 22 };
+Person p2 = new Person { Name = "Hakan", Age = 23 };
+
+Console.WriteLine(p1.Equals(p2)); // False
+
+p2.Age = 22;
+
+Console.WriteLine(p1.Equals(p2)); // True
+
+class Person : IEquatable<Person>
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+
+    public bool Equals(Person? other)
+    {
+        return Name == other?.Name && Age == other?.Age;
+    }
+}
+
+#endregion
