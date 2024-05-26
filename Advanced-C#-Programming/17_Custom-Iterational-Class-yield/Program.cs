@@ -59,6 +59,7 @@ public class Stock : IEnumerable<string>
 #endregion
 
 #region IEnumerator Interface
+/*
 class StockEnumerator : IEnumerator<string>
 {
     List<string> source;
@@ -74,5 +75,27 @@ class StockEnumerator : IEnumerator<string>
     public bool MoveNext() => ++currentIndex < source.Count;
     public void Reset() => source.Clear();
 }
+*/
+#endregion
+
+#region yield Keyword
+foreach (string name in GetNames())
+{
+    Console.WriteLine(name);
+}
+IEnumerable GetNames()
+{
+    yield return "Hakan";
+    Console.WriteLine("After Hakan");
+    yield return "Alperen";
+    Console.WriteLine("After Alperen");
+    yield return "Mehmet";
+    Console.WriteLine("After Mehmet");
+    yield return "Ali";
+    Console.WriteLine("After Ali");
+    yield return "Veli";
+    Console.WriteLine("After Veli");
+}
+
 #endregion
 
