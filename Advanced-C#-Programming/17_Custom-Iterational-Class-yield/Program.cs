@@ -79,11 +79,19 @@ class StockEnumerator : IEnumerator<string>
 #endregion
 
 #region yield Keyword
-foreach (string name in GetNames())
+//foreach (string name in GetNames())
+//{
+//    Console.WriteLine(name);
+//}
+
+
+//Deffered Execution is a term used to describe the behavior of the yield keyword. The method is not executed until the foreach loop is executed.
+IEnumerable<string> names = GetNames(); // It is referenced but not executed
+foreach (string name in names) // It is executed here
 {
     Console.WriteLine(name);
 }
-IEnumerable GetNames()
+IEnumerable<string> GetNames()
 {
     yield return "Hakan";
     Console.WriteLine("After Hakan");
@@ -92,6 +100,7 @@ IEnumerable GetNames()
     yield return "Mehmet";
     Console.WriteLine("After Mehmet");
     yield return "Ali";
+    yield break; // Stops the iteration
     Console.WriteLine("After Ali");
     yield return "Veli";
     Console.WriteLine("After Veli");
