@@ -37,6 +37,7 @@ class Stock
 #endregion
 
 #region IEnumerable Interface
+/*
 // IEnumerable interface is required to make a class iterable (foreach loop), it has only one method GetEnumerator() and there is also generic version IEnumerable<T>
 
 public class Stock : IEnumerable<string>
@@ -54,6 +55,24 @@ public class Stock : IEnumerable<string>
         return materials.GetEnumerator();
     }
 }
+*/
 #endregion
 
+#region IEnumerator Interface
+class StockEnumerator : IEnumerator<string>
+{
+    List<string> source;
+    int currentIndex = -1;
+    public StockEnumerator(List<string> source) => this.source = source;
+
+
+    public string Current => source[currentIndex];
+
+    object IEnumerator.Current => source[currentIndex];
+
+    public void Dispose() => source = null;
+    public bool MoveNext() => ++currentIndex < source.Count;
+    public void Reset() => source.Clear();
+}
+#endregion
 
