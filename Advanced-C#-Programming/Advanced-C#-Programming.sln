@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17_Custom-Iterational-Class
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18_Custom-Collection-Initializers", "18_Custom-Collection-Initializers\18_Custom-Collection-Initializers.csproj", "{087F429F-51EE-4D67-8B19-7358E42FDE78}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "19_Attributes", "19_Attributes\19_Attributes.csproj", "{F78E01F6-04B9-4941-B5CF-69013C4921E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{087F429F-51EE-4D67-8B19-7358E42FDE78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{087F429F-51EE-4D67-8B19-7358E42FDE78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{087F429F-51EE-4D67-8B19-7358E42FDE78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F78E01F6-04B9-4941-B5CF-69013C4921E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F78E01F6-04B9-4941-B5CF-69013C4921E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F78E01F6-04B9-4941-B5CF-69013C4921E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F78E01F6-04B9-4941-B5CF-69013C4921E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
