@@ -97,6 +97,22 @@ Console.WriteLine(results);
 */
 #endregion
 
+#region Accessing private members with reflection
+// Even though members of a class are private, you can still access them using reflection.
+
+MyClass m = new MyClass() { };
+Type type = typeof(MyClass);
+var members = type.GetMembers(BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public);  //Gives all members of the class
+
+var property = type.GetProperty("MyProperty", BindingFlags.NonPublic | BindingFlags.Instance);
+
+members.ToList().ForEach(member => Console.WriteLine(member.Name));
+
+Console.WriteLine(property.GetValue(m)); // Gives 5, accesiing private property using reflection
+
+
+#endregion
+
 
 Console.WriteLine();
 
@@ -104,7 +120,7 @@ Console.WriteLine();
 
 class MyClass
 {
-    public int MyProperty { get; set; }
+    private int MyProperty { get; set; } = 5;
     public int MyProperty2 { get; set; }
     public string MyProperty3 { get; set; }
     int MyProperty4 { get; set; }
