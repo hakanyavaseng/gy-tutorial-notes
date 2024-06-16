@@ -47,6 +47,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "22_Random-Number-Generation
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "23_SecureString-Memory-Security", "23_SecureString-Memory-Security\23_SecureString-Memory-Security.csproj", "{4D10EB63-A912-4DC8-B0FD-EFE48F988554}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24_EventLog-EventViewer", "24_EventLog-EventViewer\24_EventLog-EventViewer.csproj", "{F3B0BF51-09BA-4C25-9F3E-02E95DD09439}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,10 @@ Global
 		{4D10EB63-A912-4DC8-B0FD-EFE48F988554}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D10EB63-A912-4DC8-B0FD-EFE48F988554}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D10EB63-A912-4DC8-B0FD-EFE48F988554}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3B0BF51-09BA-4C25-9F3E-02E95DD09439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3B0BF51-09BA-4C25-9F3E-02E95DD09439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3B0BF51-09BA-4C25-9F3E-02E95DD09439}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3B0BF51-09BA-4C25-9F3E-02E95DD09439}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
