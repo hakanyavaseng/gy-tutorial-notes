@@ -53,7 +53,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "25_Extension-Methods", "25_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "26_Debugger-Display", "26_Debugger-Display\26_Debugger-Display.csproj", "{80C67664-E2D7-433F-AC54-06186D61F6AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "27_Static-Abstract-Members", "27_Static-Abstract-Members\27_Static-Abstract-Members.csproj", "{20BF28E6-2E0B-45C9-A87A-0ADCB2AA25F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "27_Static-Abstract-Members", "27_Static-Abstract-Members\27_Static-Abstract-Members.csproj", "{20BF28E6-2E0B-45C9-A87A-0ADCB2AA25F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "28_Static-Anonymous-Functions", "28_Static-Anonymous-Functions\28_Static-Anonymous-Functions.csproj", "{9B54DE62-F838-49FF-A418-51728B0929BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -165,6 +167,10 @@ Global
 		{20BF28E6-2E0B-45C9-A87A-0ADCB2AA25F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20BF28E6-2E0B-45C9-A87A-0ADCB2AA25F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20BF28E6-2E0B-45C9-A87A-0ADCB2AA25F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B54DE62-F838-49FF-A418-51728B0929BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B54DE62-F838-49FF-A418-51728B0929BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B54DE62-F838-49FF-A418-51728B0929BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B54DE62-F838-49FF-A418-51728B0929BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
