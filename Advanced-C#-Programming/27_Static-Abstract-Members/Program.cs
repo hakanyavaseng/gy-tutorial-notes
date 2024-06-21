@@ -76,3 +76,81 @@ interface IX
 */
 #endregion
 
+#region Static Abstract Operators and Generic Types
+
+class XX<T> where T : IX, new()
+{
+    public XX()
+    {
+        T t1 = new T();
+        T t2 = new T();
+        _ = t1 + t2; // Operators can be used with generic types.
+        _ = t1 - t2;
+        _ = t1 * t2;
+        _ = t1 / t2;
+    }
+   
+}
+
+class X : IX
+{
+    public int Value => 5;
+
+    static int IX.operator +(IX a) => a.Value + 1;
+
+    static int IX.operator +(IX a, IX b) => a.Value + b.Value;
+   
+    static int IX.operator +(IX x, A a)
+    {
+        throw new NotImplementedException();
+    }
+
+    static int IX.operator +(IX x, B b)
+    {
+        throw new NotImplementedException();
+    }
+
+    static int IX.operator -(IX a)
+    {
+        throw new NotImplementedException();
+    }
+
+    static int IX.operator -(IX a, IX b)
+    {
+        throw new NotImplementedException();
+    }
+
+    static long IX.operator *(IX a, IX b)
+    {
+        throw new NotImplementedException();
+    }
+
+    static decimal IX.operator /(IX a, IX b)
+    {
+        throw new NotImplementedException();
+    }
+}
+
+interface IX
+{
+    int Value { get; }
+    static abstract int operator +(IX a);
+    static abstract int operator -(IX a);
+    static abstract int operator +(IX a, IX b);
+    static abstract int operator -(IX a, IX b);
+    static abstract long operator *(IX a, IX b);
+    static abstract decimal operator /(IX a, IX b);
+    static abstract int operator +(IX x, A a);
+    static abstract int operator +(IX x, B b);
+
+}
+
+class A { public int a; }
+class B { public int b; }
+
+#endregion
+
+
+
+
+
